@@ -3,7 +3,7 @@ import Link from "next/link";
 
 
 const FeaturedPages = ({pages, pageGroupName, header}) => {
-    console.log(pages, pageGroupName)
+    // console.log(pages, pageGroupName)
     return (
   <div className=" bg-primary text-primary-content p-2">
       <div className="hero  ">

@@ -47,6 +47,18 @@ module.exports = {
 
           /* Add as many custom properties as you need */
         },
+        nickstheme: {
+          "base-100": "#F1EBD6", //base of application
+          "base-content": "#22352B", //base of text on this
+          "primary": "#F1EBD6",
+          "primary-content": "#22352B",
+          "secondary": "#63A153",
+          "secondary-content": "#F1EBD6",
+          "neutral": "#FFF",
+          "neutral-content": "#22352B",
+          "bg-neutral-content": "#FFF",
+          "font-family": "Noto Serif JP",
+        }
       },
       "light",
       "dark",

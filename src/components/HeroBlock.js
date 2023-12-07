@@ -12,27 +12,27 @@ const HeroBlock = ({ header, subheader, body, cta1_text, cta2_text, cta1_link, c
     // const bodyClasses = "text-lg mb-6 text-center whitespace-pre-line";
 
     return (
-<div className={`hero min-h-[70vh] p-0  bg-primary text-primary-content `} 
+<div className={`min-h-[70vh] p-0  bg-primary text-primary-content `} 
 // style={{backgroundImage: `url(${image_link})`}}
 >
 
 
-  <div className="hero-content p-0  mt-0 flex flex-col text-center text-primary-content">
+  <div className="p-24 mt-0 flex flex-col text-left text-primary-content">
     
-    <div className="flex flex-col space-y-2 max-w-xl ">
+    <div className="flex flex-col max-w-xl ">
 
-    <p className="max-w-xl uppercase font-semibold">{subheader}</p>
-      <h1 className=" text-5xl font-bold ">{header}</h1>
+    
+      <h1 className="text-5xl leading-snug">{header}</h1>
+      <p className="max-w-xl text-xl">{subheader}</p>
      </div>
 
+     {cta1_text && cta1_link &&
+        <div className="space-x-2 mt-16">
 
-      <p className="max-w-2xl px-2">{body.slice(0,204)}</p>
-      <label>Join Mark, John, Jenny and 200+ others on the waitlist.</label>
-      <div className="space-x-2">
-
-        <input className="input input-bordered join-item text-black" placeholder="Email"/>
-        <button className="btn  btn-secondary join-item ">Request Access</button>
-      </div>
+        <a href={cta1_link} className="btn  btn-secondary join-item ">{cta1_text}</a>
+        </div>
+      }
+      
 
 
 

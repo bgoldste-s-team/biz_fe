@@ -85,9 +85,9 @@ const Navbar = ({ site }) => {
 
     return (
      <div className="navbar bg-base-100 z-50 top-0 sticky flex items-center">
-            <div className="navbar-start sm:pb-0">
+            <div className="navbar-start sm:pb-0 ml-24">
                 <div className=" break-words py-4 ">
-                    <Link href="/"className={`text-left btn btn-ghost normal-case   ${dynamicFontSize}`}>
+                    <Link href="/"className={`text-left btn btn-ghost pl-0 normal-case   ${dynamicFontSize}`}>
                             {siteName}
                      
                     </Link>

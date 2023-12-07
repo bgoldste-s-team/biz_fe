@@ -6,7 +6,7 @@ import formatSlug from "@/lib/formatSlug";
 import Badge from "@/components/Badge"
 
 export default function ContentCard({ content }) {
-  console.log(content);
+  // console.log(content);
 
   let thumbnail = content?.products?.[0]?.product?.thumbnail;
   if (!thumbnail) {

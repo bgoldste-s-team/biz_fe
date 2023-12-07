@@ -9,7 +9,7 @@ import {
 
 
 const AdBlock = ({name, page, site, index}) => {
-    console.log('adblock', page, site, index, name)
+    // console.log('adblock', page, site, index, name)
 
      
     const textArray = [
@@ -168,8 +168,8 @@ useEffect(() => {
 
 
             <div className={'flex flex-col md:flex-row justify-center gap-2 mt-4'}>
-                <Link class ="btn btn-primary btn-outline " rel="noopener noreferrer" target="_blank" href={"https://pagesake.com"} passHref>{variants[variant].cta2_text}</Link>
-                <Link class ="btn btn-primary"  rel="noopener noreferrer" target="_blank" href={"https://pagesake.com/signup"} passHref>{variants[variant].cta1_text}</Link>
+                <Link className="btn btn-primary btn-outline " rel="noopener noreferrer" target="_blank" href={"https://pagesake.com"} passHref>{variants[variant].cta2_text}</Link>
+                <Link className="btn btn-primary"  rel="noopener noreferrer" target="_blank" href={"https://pagesake.com/signup"} passHref>{variants[variant].cta1_text}</Link>
             </div>
 
         </div>

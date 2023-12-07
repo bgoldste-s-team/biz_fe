@@ -3,7 +3,7 @@ import Link from "next/link";
 
 
 const Footer = ({site, pages}) => {
-  console.log(site)
+  // console.log(site)
   return (
 <div className='flex flex-col'>
     <footer className="footer p-10 bg-secondary text-secondary-content">
