@@ -12,7 +12,7 @@ const HeroBlock = ({ header, subheader, body, cta1_text, cta2_text, cta1_link, c
     // const bodyClasses = "text-lg mb-6 text-center whitespace-pre-line";
 
     return (
-<div className={`min-h-[70vh] p-0  bg-primary text-primary-content `} 
+<div className={`min-h-[50vh] p-0  bg-primary text-primary-content `} 
 // style={{backgroundImage: `url(${image_link})`}}
 >
 
@@ -27,7 +27,7 @@ const HeroBlock = ({ header, subheader, body, cta1_text, cta2_text, cta1_link, c
      </div>
 
      {cta1_text && cta1_link &&
-        <div className="space-x-2 mt-16">
+        <div className="space-x-2 mt-10">
 
         <a href={cta1_link} className="font-sans normal-case btn btn-secondary join-item">{cta1_text}</a>
         </div>

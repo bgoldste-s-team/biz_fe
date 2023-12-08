@@ -54,8 +54,8 @@ module.exports = {
           "primary-content": "#22352B",
           "secondary": "#63A153",
           "secondary-content": "#F1EBD6",
-          "neutral": "#FFF",
-          "neutral-content": "#22352B",
+          "neutral": "#22352B",
+          "neutral-content": "#F1EBD6",
           "bg-neutral-content": "#FFF",
           "font-family": "Noto Serif JP",
         }
