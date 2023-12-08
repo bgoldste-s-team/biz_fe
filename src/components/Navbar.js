@@ -76,7 +76,7 @@ const Navbar = ({ site }) => {
         </Link>
         <Link
           href="/"
-          className={`sm:ml-10 text-lg block px-2 py-2 rounded hover:opacity-50`}
+          className={`sm:ml-10 text-lg block px-2 py-2 mb-5 rounded hover:opacity-50`}
         >
           Contact
         </Link>

@@ -17,19 +17,19 @@ const HeroBlock = ({ header, subheader, body, cta1_text, cta2_text, cta1_link, c
 >
 
 
-  <div className="p-24 mt-0 flex flex-col text-left text-primary-content">
+  <div className="p-14 sm:pl-24 pt-10 mt-0 flex flex-col text-left text-primary-content">
     
     <div className="flex flex-col max-w-xl ">
 
     
-      <h1 className="text-5xl leading-snug">{header}</h1>
-      <p className="max-w-xl text-xl">{subheader}</p>
+      <h1 className="text-5xl sm:leading-snug">{header}</h1>
+      <p className="max-w-xl text-xl pt-5">{subheader}</p>
      </div>
 
      {cta1_text && cta1_link &&
         <div className="space-x-2 mt-16">
 
-        <a href={cta1_link} className="btn  btn-secondary join-item ">{cta1_text}</a>
+        <a href={cta1_link} className="font-sans normal-case btn btn-secondary join-item">{cta1_text}</a>
         </div>
       }
       
