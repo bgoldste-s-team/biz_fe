@@ -22,19 +22,17 @@ const TextBlock = ({
     <div
       key={key}
       contentBlockId={contentBlockId}
-      className={`bg-neutral p-24 py-12 pt-24 rounded-none rounded-t-2xl card md:card-side ${
+      className={`bg-neutral sm:p-24 sm:py-12 sm:pt-24 rounded-none rounded-t-2xl card md:card-side ${
         index % 2 === 0 ? "md:text-right" : "md:flex-row-reverse "
       }   `}
     >
-      <figure className="object-cover">
-        <img
+      <img
           src={image_link}
           alt="Hero Image"
-          className="mask mask-circle w-2/3"
+          className="sm:object-fill rounded-t-2xl sm:rounded-2xl h-64 sm:w-full"
         />
-      </figure>
 
-      <div className="flex flex-col text-neutral-content">
+      <div className="flex flex-col text-neutral-content p-12 sm:p-0 sm:mr-20">
         {subheader && <h3 className="text-lg uppercase">{subheader}</h3>}
         <h2 className="text-4xl font-thin">{header}</h2>
 
