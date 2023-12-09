@@ -73,16 +73,17 @@ const ContactFormBlock = ({
   return (
     <div
       key={key}
+      id="contact"
       contentBlockId={contentBlockId}
-      className="scroll-p-0 space-y-4 flex flex-col items-center bg-primary text-primary-content pt-28"
+      className="scroll-p-0 space-y-4 flex flex-col items-center bg-primary text-primary-content pt-28 bg-[url('/contactformblock_bg.svg')]"
     >
       <div
-        className={`hero min-h-[90vh] p-0  `}
+        className={`hero p-0  `}
         // style={{backgroundImage: `url(${image_link})`}}
       >
         {/* <div className="hero-overlay bg-opacity-0"></div> */}
 
-        <div className="hero-content p-0  mt-0 flex flex-col text-center ">
+        <div className="hero-content p-0 mt-0 flex flex-col text-center ">
           <div className="flex flex-col space-y-2 max-w-xl ">
             <h1 className="text-5xl font-thin">{header} </h1>
           </div>
@@ -91,18 +92,23 @@ const ContactFormBlock = ({
 
           <div className="space-x-2">
             <div className="form-control w-full mt-20">
-              <form onSubmit={handleSubmit} className="flex justify-center justify-center items-center sm:items-start flex-col sm:flex-row gap-7 sm:gap-14">
+              <form
+                onSubmit={handleSubmit}
+                className="flex justify-center items-center sm:items-start flex-col sm:flex-row gap-7 sm:gap-10"
+              >
                 <input
                   type="email"
-                  className="input  bg-white text-neutral input-bordered w-80 sm:w-96"
+                  className="input font-sans  bg-white text-neutral input-bordered w-80 sm:w-96"
                   value={formData.email}
-                  placeholder="me@awesomeidea.com"
+                  placeholder="Email Address"
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
                 />
-
-                <button type="submit" className="btn btn-md mb-48 sm:px-10 btn-secondary font-sans normal-case w-36">
+                <button
+                  type="submit"
+                  className="btn btn-md mb-32 sm:mb-48 sm:px-10 btn-secondary font-sans normal-case w-36"
+                >
                   Sign Up
                 </button>
               </form>
