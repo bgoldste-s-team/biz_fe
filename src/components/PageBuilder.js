@@ -8,6 +8,7 @@ import CaseStudyBlock from "@/components/CaseStudyBlock";
 import ContactBlock from "@/components/ContactBlock";
 import SubscribeBlock from "@/components/SubscribeBlock";
 import FeaturedPages from "@/components/FeaturedPages";
+import FeaturesBlock from "@/components/FeaturesBlock";
 import AdBlock from "@/components/AdBlock";
 import Link from "next/link";
 import EngagementBlock from "@/components/EngagementBlock";
@@ -218,6 +219,8 @@ export default function PageBuilder({ page, site }) {
                                 />
                             </div>
                             )
+                    case 'FeaturesBlock':
+                        return commonDiv(FeaturesBlock, null);
                     
                      case 'SubscribeBlock':
                         return (
