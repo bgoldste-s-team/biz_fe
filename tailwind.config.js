@@ -47,7 +47,7 @@ module.exports = {
 
           /* Add as many custom properties as you need */
         },
-        nickstheme: {
+        oldmoney: {
           "base-100": "#F1EBD6", //base of application
           "base-content": "#22352B", //base of text on this
           "primary": "#F1EBD6",
@@ -58,7 +58,56 @@ module.exports = {
           "neutral-content": "#F1EBD6",
           "bg-neutral-content": "#FFF",
           "font-family": "Noto Serif JP",
-        }
+        },
+        dressy: {
+         "base-100": "#F5F5F5", //base of application
+         "base-content": "#2E2E2E", //dark/base text on base color
+         "primary": "#F5F5F5", //base of application 
+         "primary-content": "#2E2E2E", //dark/base text on base color 
+         "secondary": "#BEAC89", //CTA color / splash
+         "secondary-content": "#F5F5F5", //base of application
+         "neutral": "#2E2E2E", //dark/base text on base color
+         "neutral-content": "#F5F5F5", //base of application
+         "bg-neutral-content": "#FFF",
+         "font-family": "Noto Serif JP",
+       },
+        beachy: {
+         "base-100": "#F9FFFD", //base of application
+         "base-content": "#222B35", //dark/base text on base color
+         "primary": "#F9FFFD", //base of application 
+         "primary-content": "#222B35", //dark/base text on base color 
+         "secondary": "#59C1C7", //CTA color / splash
+         "secondary-content": "#F9FFFD", //base of application
+         "neutral": "#222B35", //dark/base text on base color
+         "neutral-content": "#F9FFFD", //base of application
+         "bg-neutral-content": "#FFF",
+         "font-family": "Noto Serif JP",
+       },
+        pink: {
+         "base-100": "#FCEEEE", //base of application
+         "base-content": "#332235", //dark/base text on base color
+         "primary": "#FCEEEE", //base of application 
+         "primary-content": "#332235", //dark/base text on base color 
+         "secondary": "#D200BD", //CTA color / splash
+         "secondary-content": "#FCEEEE", //base of application
+         "neutral": "#332235", //dark/base text on base color
+         "neutral-content": "#FCEEEE", //base of application
+         "bg-neutral-content": "#FFF",
+         "font-family": "Inter",
+       },
+        aqua: { //this is the theme that requires additional color for base https://www.figma.com/file/VUpdPoSEixykXKYnw3N6NN?node-id=465:911&mode=design#642672438
+         "base-100": "#F2FCF1", //base of application
+         "base-content": "#0D201E", //dark/base text on base color
+         "primary": "#F2FCF1", //base of application 
+         "primary-content": "#0D201E", //dark/base text on base color 
+         "secondary": "#00B2A8", //CTA color / splash
+         "secondary-content": "#F2FCF1", //base of application
+         "neutral": "#214E49", //dark/base text on base color
+         "neutral-content": "#F2FCF1", //base of application
+         "bg-neutral-content": "#FFF",
+         "font-family": "Inter",
+       },
+
       },
       "light",
       "dark",
