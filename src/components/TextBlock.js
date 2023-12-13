@@ -45,7 +45,7 @@ const TextBlock = ({
             plugins={[remarkGfm]}
             className="prose text-neutral-content"
           >
-            {body.slice(0, 2000)}
+            {body}
           </ReactMarkdown>
         </div>
         {/* <div className='btn btn-primary'>Subscribe</div> */}

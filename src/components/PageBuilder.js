@@ -191,7 +191,8 @@ export default function PageBuilder({ page, site }) {
               </div>
             );
           case "FeaturesBlock":
-            return commonDiv(FeaturesBlock, null);
+            console.log(c, c.children)
+            return commonDiv(FeaturesBlock, null,{}, { cb_children: c.children });
 
           case "ContactFormBlock":
             return commonDiv(ContactFormBlock, null, {}, { site_id: site.id });
