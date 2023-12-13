@@ -29,9 +29,9 @@ const FeaturesBlock = ({
           How we help: 
         </h2>
         <div className="text-primary-content text-center space-y-16 sm:space-y-0 sm:space-x-32 flex flex-col sm:flex-row pt-16 sm:p-12 sm:p-0 sm:mr-2 sm:pt-12">
-        {cb_children?.map((child) => 
+        {cb_children?.map((child, index) => 
 
-            <div className="basis-1/3 p-8 bg-primary rounded-2xl flex flex-col justify-between">
+            <div key={index} className="basis-1/3 p-8 bg-primary rounded-2xl flex flex-col justify-between">
               <p className="text-2xl">{child.header}</p>
               {/* <p className="mb-auto pt-8 text-lg prose"> */}
               {/* {child.body} */}
