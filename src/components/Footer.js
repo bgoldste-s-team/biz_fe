@@ -15,13 +15,10 @@ const Footer = ({ site, pages }) => {
         </aside>
 
         <nav>
-          <p className="p-2 pl-0 text-sm font-thin">
-            725 Broad St <br /> Los Angeles, CA 90291
+          <p className="p-2 pl-0 text-sm font-thin text-neutral-content">
+            {site.footer_body}
           </p>
-          <p className="p-2 pl-0 text-sm font-thin">
-            info@busiconsu.com <br />
-            (310) 384-9902
-          </p>
+       
         </nav>
         <nav>
           {site.nav1_text && site.nav1_url ? (
