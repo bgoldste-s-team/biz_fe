@@ -40,7 +40,7 @@ export default function MyApp({ Component, pageProps }) {
   }, [])
   return (
     <ThemeProvider attribute="class">
-      <div data-theme={'dressy'}>
+      <div data-theme={theme}>
         <Component {...pageProps} />
       </div>
     </ThemeProvider>

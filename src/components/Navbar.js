@@ -56,30 +56,44 @@ const Navbar = ({ site }) => {
           isOpen ? "block" : "hidden"
         } px-2 pt-2 pb-4 sm:flex sm:p-0 text-center`}
       >
+
+
+      { site.nav1_text && site.nav1_url ?
         <Link
-          href="/"
+          href={site.nav1_url}
           className={`text-lg block px-2 py-2 rounded hover:opacity-50`}
         >
-          About
+          {site.nav1_text}
         </Link>
+        :null }
+
+         { site.nav2_text && site.nav2_url ?
         <Link
-          href="/"
-          className={`sm:ml-10 text-lg block px-2 py-2 rounded hover:opacity-50`}
+          href={site.nav2_url}
+          className={`text-lg block px-2 py-2 rounded hover:opacity-50`}
         >
-          Services
+          {site.nav2_text}
         </Link>
+        :null }
+
+         { site.nav3_text && site.nav3_url ?
         <Link
-          href="/"
-          className={`sm:ml-10 text-lg block px-2 py-2 rounded hover:opacity-50`}
+          href={site.nav3_url}
+          className={`text-lg block px-2 py-2 rounded hover:opacity-50`}
         >
-          Team
+          {site.nav3_text}
         </Link>
+        :null }
+
+         { site.nav4_text && site.nav4_url ?
         <Link
-          href="/"
-          className={`sm:ml-10 text-lg block px-2 py-2 mb-5 rounded hover:opacity-50`}
+          href={site.nav4_url}
+          className={`text-lg block px-2 py-2 rounded hover:opacity-50`}
         >
-          Contact
+          {site.nav4_text}
         </Link>
+        :null }
+    
       </nav>
     </header>
   );

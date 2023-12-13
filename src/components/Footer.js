@@ -24,9 +24,41 @@ const Footer = ({ site, pages }) => {
           </p>
         </nav>
         <nav>
-          <Link className="underline" href={"/about"}>About</Link>
-          <Link className="underline pt-3" href="/services">Services</Link>
-          <Link className="underline pt-3" href={"/contact"}>Contact</Link>
+         { site.nav1_text && site.nav1_url ?
+        <Link
+          href={site.nav1_url}
+          className={`underline`}
+        >
+          {site.nav1_text}
+        </Link>
+        :null }
+
+         { site.nav2_text && site.nav2_url ?
+        <Link
+          href={site.nav2_url}
+          className={`underline pt-2`}
+        >
+          {site.nav2_text}
+        </Link>
+        :null }
+
+         { site.nav3_text && site.nav3_url ?
+        <Link
+          href={site.nav3_url}
+          className={`underline pt-2`}
+        >
+          {site.nav3_text}
+        </Link>
+        :null }
+
+         { site.nav4_text && site.nav4_url ?
+        <Link
+          href={site.nav4_url}
+          className={`underline pt-2`}
+        >
+          {site.nav4_text}
+        </Link>
+        :null }
         </nav>
       </footer>
 

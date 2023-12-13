@@ -12,7 +12,7 @@ const HeroBlock = ({ header, subheader, body, cta1_text, cta2_text, cta1_link, c
     // const bodyClasses = "text-lg mb-6 text-center whitespace-pre-line";
 
     return (
-<div className={`min-h-[50vh] p-0  bg-primary text-primary-content `} 
+<div className={` p-0  bg-primary text-primary-content `} 
 // style={{backgroundImage: `url(${image_link})`}}
 >
 
