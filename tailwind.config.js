@@ -2,12 +2,11 @@
 import siteData from "./src/data/site_data.json";
 
 module.exports = {
-  darkMode: 'class',
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./src/app/**/*.{js,ts,jsx,tsx}"
-
+    "./src/app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -20,94 +19,92 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
-     themes: [
+    themes: [
       {
-        'pagesake': {
-
-          "primary": "#5DD7AB",
+        pagesake: {
+          primary: "#5DD7AB",
           "primary-content": "#1c1c1c",
-          "secondary": "#e6c3ff",
+          secondary: "#e6c3ff",
 
-          "accent": "#00ffff",
+          accent: "#00ffff",
 
-          "neutral": "#ffffff", // becomes 'default'
+          neutral: "#ffffff", // becomes 'default'
           // "neutral-content": "#2fffa9",  // becomes 'default' text
 
           "base-100": "#1c1c1c", //base of application
           "base-content": "#ffffff", //base of text on this
 
-          "info": "#3abff8",
+          info: "#3abff8",
 
-          "success": "#36d399",
+          success: "#36d399",
 
-          "warning": "#fbbd23",
+          warning: "#fbbd23",
           //
-          "error": "rgba(255,0,0,0.73)"
-
+          error: "rgba(255,0,0,0.73)",
 
           /* Add as many custom properties as you need */
         },
         oldmoney: {
           "base-100": "#F1EBD6", //base of application
           "base-content": "#22352B", //base of text on this
-          "primary": "#F1EBD6",
+          primary: "#F1EBD6",
           "primary-content": "#22352B",
-          "secondary": "#63A153",
+          secondary: "#63A153",
           "secondary-content": "#F1EBD6",
-          "neutral": "#22352B",
+          neutral: "#22352B",
           "neutral-content": "#F1EBD6",
           "bg-neutral-content": "#FFF",
           "font-family": "Noto Serif JP",
         },
         dressy: {
-         "base-100": "#F5F5F5", //base of application
-         "base-content": "#2E2E2E", //dark/base text on base color
-         "primary": "#F5F5F5", //base of application 
-         "primary-content": "#2E2E2E", //dark/base text on base color 
-         "secondary": "#BEAC89", //CTA color / splash
-         "secondary-content": "#F5F5F5", //base of application
-         "neutral": "#2E2E2E", //dark/base text on base color
-         "neutral-content": "#F5F5F5", //base of application
-         "bg-neutral-content": "#FFF",
-         "font-family": "Noto Serif JP",
-       },
+          "base-100": "#F5F5F5", //base of application
+          "base-content": "#2E2E2E", //dark/base text on base color
+          primary: "#F5F5F5", //base of application
+          "primary-content": "#2E2E2E", //dark/base text on base color
+          secondary: "#BEAC89", //CTA color / splash
+          "secondary-content": "#F5F5F5", //base of application
+          neutral: "#2E2E2E", //dark/base text on base color
+          "neutral-content": "#F5F5F5", //base of application
+          "bg-neutral-content": "#FFF",
+          "font-family": "Noto Serif JP",
+        },
         beachy: {
-         "base-100": "#F9FFFD", //base of application
-         "base-content": "#222B35", //dark/base text on base color
-         "primary": "#F9FFFD", //base of application 
-         "primary-content": "#222B35", //dark/base text on base color 
-         "secondary": "#59C1C7", //CTA color / splash
-         "secondary-content": "#F9FFFD", //base of application
-         "neutral": "#222B35", //dark/base text on base color
-         "neutral-content": "#F9FFFD", //base of application
-         "bg-neutral-content": "#FFF",
-         "font-family": "Noto Serif JP",
-       },
+          "base-100": "#F9FFFD", //base of application
+          "base-content": "#222B35", //dark/base text on base color
+          primary: "#F9FFFD", //base of application
+          "primary-content": "#222B35", //dark/base text on base color
+          secondary: "#59C1C7", //CTA color / splash
+          "secondary-content": "#F9FFFD", //base of application
+          neutral: "#222B35", //dark/base text on base color
+          "neutral-content": "#F9FFFD", //base of application
+          "bg-neutral-content": "#FFF",
+          "font-family": "Noto Serif JP",
+        },
         pink: {
-         "base-100": "#FCEEEE", //base of application
-         "base-content": "#332235", //dark/base text on base color
-         "primary": "#FCEEEE", //base of application 
-         "primary-content": "#332235", //dark/base text on base color 
-         "secondary": "#D200BD", //CTA color / splash
-         "secondary-content": "#FCEEEE", //base of application
-         "neutral": "#332235", //dark/base text on base color
-         "neutral-content": "#FCEEEE", //base of application
-         "bg-neutral-content": "#FFF",
-         "font-family": "Inter",
-       },
-        aqua: { //this is the theme that requires additional color for base https://www.figma.com/file/VUpdPoSEixykXKYnw3N6NN?node-id=465:911&mode=design#642672438
-         "base-100": "#F2FCF1", //base of application
-         "base-content": "#0D201E", //dark/base text on base color
-         "primary": "#F2FCF1", //base of application 
-         "primary-content": "#0D201E", //dark/base text on base color 
-         "secondary": "#00B2A8", //CTA color / splash
-         "secondary-content": "#F2FCF1", //base of application
-         "neutral": "#214E49", //dark/base text on base color
-         "neutral-content": "#F2FCF1", //base of application
-         "bg-neutral-content": "#FFF",
-         "font-family": "Inter",
-       },
-
+          "base-100": "#FCEEEE", //base of application
+          "base-content": "#332235", //dark/base text on base color
+          primary: "#FCEEEE", //base of application
+          "primary-content": "#332235", //dark/base text on base color
+          secondary: "#D200BD", //CTA color / splash
+          "secondary-content": "#FCEEEE", //base of application
+          neutral: "#332235", //dark/base text on base color
+          "neutral-content": "#FCEEEE", //base of application
+          "bg-neutral-content": "#FFF",
+          "font-family": "Inter",
+        },
+        aqua: {
+          //this is the theme that requires additional color for base https://www.figma.com/file/VUpdPoSEixykXKYnw3N6NN?node-id=465:911&mode=design#642672438
+          "base-100": "#F2FCF1", //base of application
+          "base-content": "#0D201E", //dark/base text on base color
+          primary: "#F2FCF1", //base of application
+          "primary-content": "#0D201E", //dark/base text on base color
+          secondary: "#00B2A8", //CTA color / splash
+          "secondary-content": "#F2FCF1", //base of application
+          neutral: "#214E49", //dark/base text on base color
+          "neutral-content": "#F2FCF1", //base of application
+          "bg-neutral-content": "#FFF",
+          "font-family": "Inter",
+        },
       },
       "light",
       "dark",
@@ -138,9 +135,7 @@ module.exports = {
       "night",
       "coffee",
       "winter",
-
-    ]
-
+    ],
   },
   // daisyui: {
   //   themes: [

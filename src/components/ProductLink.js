@@ -21,31 +21,28 @@ export default function ProductLink({ product }) {
           className="h-48 w-48 "
         ></Image>
       </figure>
-        <div className="card-body ">
-            <div className="card-title ">
-              <h2 className="prose-md text-neutral-content">
-                <Link className="text-neutral" href={product.url}>{product.name}</Link>
-              </h2>
-            </div>
-            <div className="card-actions grid grid-cols-2">
-                {slug ? (
-                    <Link className="btn-link btn" href={slug}>
-                        Read review
-                    </Link>
-                ) : null}
-                <button className="btn btn-primary">
-                  <Link href={product.url}>
-                    Buy Now{" "}
-                    {!product.price.includes("None")
-                      ? "for " + product.price
-                      : null}
-                  </Link>
-                </button>
-
-
-
-          </div>
+      <div className="card-body ">
+        <div className="card-title ">
+          <h2 className="prose-md text-neutral-content">
+            <Link className="text-neutral" href={product.url}>
+              {product.name}
+            </Link>
+          </h2>
         </div>
+        <div className="card-actions grid grid-cols-2">
+          {slug ? (
+            <Link className="btn-link btn" href={slug}>
+              Read review
+            </Link>
+          ) : null}
+          <button className="btn btn-primary">
+            <Link href={product.url}>
+              Buy Now{" "}
+              {!product.price.includes("None") ? "for " + product.price : null}
+            </Link>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

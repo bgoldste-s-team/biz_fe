@@ -41,7 +41,10 @@ const TextBlock = ({
         <h2 className="text-4xl font-thin">{header}</h2>
 
         <div className="mt-5 font-thin">
-          <ReactMarkdown plugins={[remarkGfm]} className="prose text-neutral-content">
+          <ReactMarkdown
+            plugins={[remarkGfm]}
+            className="prose text-neutral-content"
+          >
             {body.slice(0, 2000)}
           </ReactMarkdown>
         </div>

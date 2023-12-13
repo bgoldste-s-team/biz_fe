@@ -1,70 +1,100 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
-const HeroBlock = ({ header, subheader, body, cta1_text, cta2_text, cta1_link, cta2_link, image_link }) => {
-    // const imageContainerClasses = "w-full h-auto mx-auto";
-    // const headerClasses = "text-3xl font-bold mb-4 text-center";
-    // const subheaderClasses = "text-lg mb-6 text-center";
-    // const button1Classes = "btn "
-    // const button2Classes = "btn  btn-accent";
-    // const buttonContainerClasses = "flex justify-center gap-4 mt-4";
-    // const bodyClasses = "text-lg mb-6 text-center whitespace-pre-line";
+const HeroBlock = ({
+  header,
+  subheader,
+  body,
+  cta1_text,
+  cta2_text,
+  cta1_link,
+  cta2_link,
+  image_link,
+}) => {
+  // const imageContainerClasses = "w-full h-auto mx-auto";
+  // const headerClasses = "text-3xl font-bold mb-4 text-center";
+  // const subheaderClasses = "text-lg mb-6 text-center";
+  // const button1Classes = "btn "
+  // const button2Classes = "btn  btn-accent";
+  // const buttonContainerClasses = "flex justify-center gap-4 mt-4";
+  // const bodyClasses = "text-lg mb-6 text-center whitespace-pre-line";
 
-    return (
-<div className={` p-0  bg-primary text-primary-content `} 
-// style={{backgroundImage: `url(${image_link})`}}
->
-
-
-  <div className="p-14 sm:pl-24 pt-10 mt-0 flex flex-col text-left text-primary-content">
-    
-    <div className="flex flex-col max-w-xl ">
-
-    
-      <h1 className="text-5xl sm:leading-snug">{header}</h1>
-      <p className="max-w-xl text-xl pt-5">{subheader}</p>
-     </div>
-
-     {cta1_text && cta1_link &&
-        <div className="space-x-2 mt-10">
-
-        <a href={cta1_link} className="font-sans normal-case btn btn-secondary join-item">{cta1_text}</a>
+  return (
+    <div
+      className={` p-0  bg-primary text-primary-content `}
+      // style={{backgroundImage: `url(${image_link})`}}
+    >
+      <div className="p-14 sm:pl-24 pt-10 mt-0 flex flex-col text-left text-primary-content">
+        <div className="flex flex-col max-w-xl ">
+          <h1 className="text-5xl sm:leading-snug">{header}</h1>
+          <p className="max-w-xl text-xl pt-5">{subheader}</p>
         </div>
-      }
-      
 
-
-
-  </div>
-
-</div>
-
-
-
-    );
+        {cta1_text && cta1_link && (
+          <div className="space-x-2 mt-10">
+            <a
+              href={cta1_link}
+              className="font-sans normal-case btn btn-secondary join-item"
+            >
+              {cta1_text}
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default HeroBlock;
 
-
-
-{/*        */}
-{/*         <div className={buttonContainerClasses}> */}
-{/*         {cta2_link && ( */}
-{/*           <Link className="btn btn-secondary" href={cta2_link}> */}
-{/*             {cta2_text} */}
-{/*           </Link> */}
-{/*         )} */}
-{/*         {cta1_link && ( */}
-{/*           <Link className="btn btn-primary" href={cta1_link}> */}
-{/*             {cta1_text} */}
-{/*           </Link> */}
-{/*         )} */}
-{/*  */}
-{/*        */}
-{/*       </div> */}
-{/*
+{
+  /*        */
+}
+{
+  /*         <div className={buttonContainerClasses}> */
+}
+{
+  /*         {cta2_link && ( */
+}
+{
+  /*           <Link className="btn btn-secondary" href={cta2_link}> */
+}
+{
+  /*             {cta2_text} */
+}
+{
+  /*           </Link> */
+}
+{
+  /*         )} */
+}
+{
+  /*         {cta1_link && ( */
+}
+{
+  /*           <Link className="btn btn-primary" href={cta1_link}> */
+}
+{
+  /*             {cta1_text} */
+}
+{
+  /*           </Link> */
+}
+{
+  /*         )} */
+}
+{
+  /*  */
+}
+{
+  /*        */
+}
+{
+  /*       </div> */
+}
+{
+  /*
 <button className="btn">Button</button>
 <button className="btn btn-neutral">Neutral</button>
 <button className="btn btn-primary">Primary</button>
@@ -81,4 +111,5 @@ export default HeroBlock;
 <button className="btn btn-outline btn-success">Success</button>
 <button className="btn btn-outline btn-warning">Warning</button>
 <button className="btn btn-outline btn-error">Error</button>
-       */}
+       */
+}
