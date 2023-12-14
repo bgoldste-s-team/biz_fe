@@ -43,7 +43,7 @@ const TextBlock = ({
         <div className="mt-5 font-thin">
           <ReactMarkdown
             plugins={[remarkGfm]}
-            className="prose text-neutral-content"
+            className="prose text-neutral-content marker:text-neutral-content"
           >
             {body}
           </ReactMarkdown>

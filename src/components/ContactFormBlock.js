@@ -109,7 +109,7 @@ const ContactFormBlock = ({
                   type="submit"
                   className="btn btn-md mb-32 sm:mb-48 sm:px-10 btn-secondary font-sans normal-case w-36"
                 >
-                  Sign Up
+                  {cta1_text ? cta1_text : "Submit"}
                 </button>
               </form>
               {feedback && (
