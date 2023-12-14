@@ -1,7 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-
+import Link from 'next/link';
 const TextBlock = ({
   key,
   contentBlockId,
@@ -48,7 +48,16 @@ const TextBlock = ({
             {body}
           </ReactMarkdown>
         </div>
-        {/* <div className='btn btn-primary'>Subscribe</div> */}
+       {cta1_text && cta1_link && (
+          <div className="space-x-2 mt-10 ">
+            <Link
+              href={cta1_link}
+              className="font-sans normal-case text-neutral  btn btn-secondary join-item"
+            >
+              {cta1_text}
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
