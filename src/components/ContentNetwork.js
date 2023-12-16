@@ -3,15 +3,16 @@ import Link from "next/link";
 export default function ContentNetwork({}) {
   const contentNetworkData = [
     {
-      title: "Best Free Tools for Side Hustlers - #1 will surprise you",
-      description: "Launch your side hustle in seconds with these FREE tools.",
-      url: "https://bestsidehustletools.com/",
+      title: "Build a Website With AI in Seconds",
+      description: "Start something great. Launch a website in 60 seconds for free.",
+      url: "https://pagesake.com/",
       thumbnail_url:
-        "https://dexterlabs-public.s3.amazonaws.com/images/five-buck-sites-62099-image.png",
-      site: "Best Side Hustle Tools",
+        "/ps_square.png",
+      site: "Pagesake",
       accent: "success",
       badgeCopy: "FREE",
     },
+
 
     {
       title: "Websites, as cheap as $5.",
@@ -35,57 +36,17 @@ export default function ContentNetwork({}) {
       badgeCopy: "USEFUL",
     },
 
-    // {
-    //   title: "Crazy Benefits for Business Owners",
-    //   description: "SUPER intersting article about asdfasdf asdf asdf asdf",
-    //   url: "https://asdfasdf.com",
-    //   thumbnail_url: "https://dexterlabs-public.s3.amazonaws.com/images/dogsledding-1507-image.png",
-    //   accent:"primary",
-    //   badgeCopy:"COOL"
-    // },
-    //  {
-    //   title: "FIrst Article",
-    //   description: "SUPER intersting article about asdfasdf asdf asdf asdf",
-    //   url: "https://asdfasdf.com",
-    //   thumbnail_url: "https://dexterlabs-public.s3.amazonaws.com/images/dogsledding-1507-image.png",
-    //   accent:"secondary",
-    //   badgeCopy:"COOL"
-    // },
-    //       {
-    //   title: "I Got An AI To Write 40000 articles for me.",
-    //   description: "Here's What Happened.",
-    //   url: "https://asdfasdf.com",
-    //   thumbnail_url: "https://dexterlabs-public.s3.amazonaws.com/images/dogsledding-1509-image.png",
-    //   site: "Five Buck Sites",
-    //   accent:"error",
-    //   badgeCopy:"WOA"
-    // },
-    // {
-    //   title: "Crazy Benefits for Business Owners",
-    //   description: "SUPER intersting article about asdfasdf asdf asdf asdf",
-    //   url: "https://asdfasdf.com",
-    //   thumbnail_url: "https://dexterlabs-public.s3.amazonaws.com/images/dogsledding-1507-image.png",
-    //   accent:"info",
-    //   badgeCopy:"COOL"
-    // },
-    //  {
-    //   title: "Web Developers HATE him",
-    //   description: "SUPER intersting article about asdfasdf asdf asdf asdf",
-    //   url: "https://asdfasdf.com",
-    //   thumbnail_url: "https://dexterlabs-public.s3.amazonaws.com/images/dogsledding-1507-image.png",
-    //   accent:"secondary",
-    //   badgeCopy:"COOL"
-    // },
+   
   ];
   return (
-    <div className="bg-primary p-4">
-      <h2 className="text-primary-content text-center py-2 text-3xl">
-        Related Content
+    <div data-theme="pagesake2" className="bg-neutral-content text-neutral p-4 font-sans">
+      <h2 className=" text-center py-2 text-3xl">
+        You Might Like: 
       </h2>
-      <ul className="grid gap-4 justify-center grid-auto-rows: minmax(120px, auto) md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+      <ul className="grid gap-4 justify-center grid-auto-rows: minmax(120px, auto) md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 ">
         {contentNetworkData.map((c) => (
           <li key={c.title}>
-            <div className="card card-compact p-4 w-120 h-120 bg-base-100 shadow-xl overflow-hidden">
+            <div className="card card-compact card-bordered border-neutral bg-neutral-content text-neutral p-4 w-120 h-120 bg-base-100 shadow-xl overflow-hidden">
               <figure>
                 <img
                   className="w-40 h-40"

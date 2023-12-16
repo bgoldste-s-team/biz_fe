@@ -44,7 +44,67 @@ module.exports = {
 
           /* Add as many custom properties as you need */
         },
+        pagesake2: {
+          primary: "#5DD7AB", //affects the mian button color, etc
+          "primary-content": "#0f172a",
+          secondary: "#ffffff",
+          "secondary-content": "#000",
+
+          accent: "#00ffff",
+
+          neutral: "#ffffff", // becomes 'default'
+          "neutral-content": "#0f172a", // becomes 'default' text
+          "font-family": "Inter", 
+        },
+        filmReverse: { //bw inverted - needs bg image update
+          "base-100": "#000", //base of application
+          "base-content": "#fff", //base of text on this
+          primary: "#000",
+          "primary-content": "#fff",
+          secondary: "#fff",
+          "secondary-content": "#000",
+          neutral: "#fff",
+          "neutral-content": "#000",
+          "bg-neutral-content": "#fff",
+          "font-family": "Noto Serif JP",
+        },
+        film3: { //same as film?
+          "base-100": "#fff", //base of application
+          "base-content": "#000", //base of text on this
+          primary: "#fff",
+          "primary-content": "#000",
+          secondary: "#000",
+          "secondary-content": "#fff",
+          neutral: "#000",
+          "neutral-content": "#fff",
+          "bg-neutral-content": "#FFF",
+          "font-family": "Noto Serif JP",
+        },
+         film: { //bw 
+          "base-100": "#fff", //base of application
+          "base-content": "#000", //base of text on this
+          primary: "#fff",
+          "primary-content": "#000",
+          secondary: "#000",
+          "secondary-content": "#fff",
+          neutral: "#000",
+          "neutral-content": "#fff",
+          "bg-neutral-content": "#FFF",
+          "font-family": "Noto Serif JP",
+        },
         oldmoney: {
+          "base-100": "#F1EBD6", //base of application
+          "base-content": "#22352B", //base of text on this
+          primary: "#F1EBD6",
+          "primary-content": "#22352B",
+          secondary: "#63A153",
+          "secondary-content": "#F1EBD6",
+          neutral: "#22352B",
+          "neutral-content": "#F1EBD6",
+          "bg-neutral-content": "#FFF",
+          "font-family": "Noto Serif JP",
+        },
+        oldmoneyINV: {
           "base-100": "#F1EBD6", //base of application
           "base-content": "#22352B", //base of text on this
           primary: "#F1EBD6",

@@ -26,7 +26,7 @@ const FeaturesBlock = ({
     >
       <div className="flex flex-col text-neutral-content p-12 sm:p-0 sm:mr-2 sm:pt-24">
         <h2 className="text-left justify-start basis-0 text-4xl text-neutral-content font-thin">
-          How we help: 
+          {header} 
         </h2>
         <div className="text-primary-content text-center space-y-16 sm:space-y-0 sm:space-x-32 flex flex-col sm:flex-row pt-16 sm:p-12 sm:p-0 sm:mr-2 sm:pt-12">
         {cb_children?.map((child, index) => 

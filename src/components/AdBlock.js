@@ -6,9 +6,9 @@ const AdBlock = ({ name, page, site, index }) => {
   // console.log('adblock', page, site, index, name)
 
   const textArray = [
-    "First message",
-    "Second message",
-    "Third message",
+     "SEO Optimized 🔎",
+      "AI Content Generation 🤖",
+      "Actually Free 🤑",
     // ... add as many messages as you want
   ];
 
@@ -31,7 +31,7 @@ const AdBlock = ({ name, page, site, index }) => {
     // },
     variant1: {
       // styling: "bg-gradient-to-r from-black via-purple-800 to-black text-white p-8 text-center",
-      styling: "bg-neutral-content text-neutral p-8 text-left",
+      styling: "",
       header1: "Don't Just Browse The Web.",
       header2: "Create It.",
       subheader: "",
@@ -50,7 +50,7 @@ const AdBlock = ({ name, page, site, index }) => {
       ],
     },
     variant2: {
-      styling: "bg-neutral-content text-neutral p-8 text-left",
+      styling: "",
       header1: "Revenue Generating Websites",
       header2: "Ready in seconds.",
       subheader: "Your Side Hustle is Calling.",
@@ -123,20 +123,17 @@ const AdBlock = ({ name, page, site, index }) => {
   }
 
   return (
-    <div className="">
-      <div className="p-4 bg-neutral-content">
+
+
         <div
-          data-theme="pagesake"
-          className={`hero rounded-2xl p-0  ${variants[variant].styling} `}
+          data-theme="pagesake2"
+          className={`font-sans  ${variants[variant].styling} flex flex-col items-center bg-neutral-content text-neutral space-y-4 pb-12`}
         >
           {/*<div  className="scroll-p-0 bg-gradient-to-r from-primary to-secondary text-white py-10 px-4">*/}
+          <div  className=' self-end'>   <img src={"/pagesake_logo.svg"} className="w-36 p-2  " /></div>
+        
 
-          <div>
-            <Link href="https://pagesake.com" target="_blank" passHref>
-              <img src={"/pagesake_logo.svg"} className=" w-28 p-2" />
-            </Link>
-            <div className="flex flex-row">
-              <h1 className={`text-4xl `}>
+              <h1 className={`text-4xl text-center `}>
                 {" "}
                 {variants[variant].header1} <br />
                 <span
@@ -146,10 +143,12 @@ const AdBlock = ({ name, page, site, index }) => {
                   {variants[variant].header2}
                 </span>
               </h1>
-            </div>
 
-            {/*ANIMATED TEXT */}
-
+           
+   
+        <div className="flex flex-row flex-reverse ">
+               
+           
             <div
               className={`text-xl   mt-4 py-2 bg-gray text-center ${
                 visible ? "" : "transition-opacity duration-300 opacity-0"
@@ -161,16 +160,14 @@ const AdBlock = ({ name, page, site, index }) => {
                   : "text-red-300 "
               }   `}
             >
-              <h1>{currentText}</h1>
+               <h1>{currentText}</h1>
             </div>
+             </div>
 
-            <p className="text-center text-md py-1">
-              {variants[variant].body1}
-            </p>
-            <p className="text-center py-1 text"> {variants[variant].body2}</p>
-
+         
+             <p className='text-lg text-neutral text-center'>{variants[variant].body2}</p>
             <div
-              className={"flex flex-col md:flex-row justify-center gap-2 mt-4"}
+              className={"flex flex-col md:flex-row justify-center gap-2 my-4"}
             >
               <Link
                 className="btn btn-primary btn-outline "
@@ -191,10 +188,10 @@ const AdBlock = ({ name, page, site, index }) => {
                 {variants[variant].cta1_text}
               </Link>
             </div>
+              
           </div>
-        </div>
-      </div>
-    </div>
+    
+ 
   );
 };
 

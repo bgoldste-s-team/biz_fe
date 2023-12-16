@@ -27,6 +27,7 @@ const TextBlock = ({
         <img
           src={image_link}
           alt="Hero Image"
+       
           className="lg:mt-24 lg:mr-12 lg:ml-12 lg:object-fill rounded-t-2xl lg:rounded-2xl h-64 w-full"
         />
       ) : (

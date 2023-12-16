@@ -4,7 +4,13 @@ import { FaFacebook, FaEnvelope, FaShareAlt } from "react-icons/fa";
 const Footer = ({ site, pages }) => {
   // console.log(site)
   return (
-    <div className="flex flex-col">
+    
+<div>
+
+
+
+
+
       <footer className="min-h-[40vh] footer p-10 bg-neutral text-neutral-content">
         <aside>
           <h1 className="text-2xl font-thin">{site.name}</h1>
@@ -47,32 +53,35 @@ const Footer = ({ site, pages }) => {
         </nav>
       </footer>
 
+
+
+
       {site.ad_level === "no_ads" ||
       site.ad_level === "no_ads_with_amazon" ? null : (
-        <div className="p-12 self-center  ">
-          <div data-theme="pagesake" className="card max-w-2xl p-4 bg-black">
-            <figure>
-              <img className="w-64 p-4" src="/pagesake_logo.png" />
-            </figure>
-            <div className="card-body">
-              <h4 className="card-title">Built With Pagesake </h4>
-              <p>
-                Create revenue-generating websites for free, in seconds, with
+  
+          <div data-theme="pagesake2" className=" min-h-[20vh] flex flex-col items-center font-sans bg-neutral-content text-neutral py-12">
+              <div  className=' self-center'>   <img src={"/pagesake_logo.svg"} className="w-80 p-2  " /></div>
+
+        <div className='max-w-xl space-y-2'>
+              <h4 className=" text-3xl text-center">Built With Pagesake </h4>
+              <p className=" text-lg  text-center ">
+                Create revenue-generating websites for free with AI in seconds.
                 Pagesake. What could you do with a free website?
               </p>
-            </div>
-            <div className="card-actions justify-center">
-              <Link href="https://pagesake.com/how-it-works" className="btn">
+          </div>
+            <div className="flex flex-col space-y-2 pt-12 self-justify-end">
+              <Link href="https://pagesake.com/how-it-works" className="btn btn-lg">
                 Learn More
               </Link>
-              <Link href="https://pagesake.com" className="btn btn-primary">
+              <Link href="https://pagesake.com" className="btn btn-primary btn-lg">
                 Start Free
               </Link>
             </div>
-          </div>
+      
         </div>
       )}
-    </div>
+
+</div>
   );
 };
 export default Footer;
