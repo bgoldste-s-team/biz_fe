@@ -54,7 +54,7 @@ const Navbar = ({ site }) => {
       <nav
         className={`${
           isOpen ? "block" : "hidden"
-        } px-2 pt-2 pb-4 sm:flex sm:p-0 text-center`}
+        } px-2 pt-2 pb-4 sm:flex sm:p-0 sm:mr-20 text-center`}
       >
         {site.nav1_text && site.nav1_url ? (
           <Link
