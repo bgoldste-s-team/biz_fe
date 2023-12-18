@@ -35,7 +35,7 @@ const HeroBlock = ({
           <div className="space-x-2 mt-10">
             <a
               href={cta1_link}
-              className="font-sans normal-case btn btn-secondary join-item"
+              className="font-sans normal-case btn btn-sm h-10 px-10 btn-secondary join-item"
             >
               {cta1_text}
             </a>
