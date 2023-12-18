@@ -21,7 +21,7 @@ const Navbar = ({ site }) => {
         <div>
           <Link
             href="/"
-            className={`sm:ml-20 font-medium text-left btn btn-ghost normal-case   ${dynamicFontSize}`}
+            className={`sm:ml-20 font-medium text-left btn btn-ghost hover:bg-inherit normal-case ${dynamicFontSize}`}
           >
             {siteName}
           </Link>
