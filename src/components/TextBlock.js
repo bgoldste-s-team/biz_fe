@@ -1,7 +1,9 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import Link from 'next/link';
+import Link from "next/link";
+import { TextBlockBackground } from "./TextBlockBackground";
+
 const TextBlock = ({
   key,
   contentBlockId,
@@ -27,15 +29,10 @@ const TextBlock = ({
         <img
           src={image_link}
           alt="Hero Image"
-       
           className="lg:mt-24 lg:mr-12 lg:ml-12 lg:object-fill rounded-t-2xl lg:rounded-2xl h-64 w-full"
         />
       ) : (
-        <img
-          src={"/textblock_bg.svg"}
-          alt="Hero Image"
-          className="h-3/6 relative top-0 float-right rounded-t-2xl lg:rounded-2xl lg:w-4/6"
-        />
+        <TextBlockBackground />
       )}
 
       <div className="flex flex-col text-neutral-content p-12 lg:p-0 lg:mr-2 lg:pt-24">
@@ -49,7 +46,7 @@ const TextBlock = ({
             {body}
           </ReactMarkdown>
         </div>
-       {cta1_text && cta1_link && (
+        {cta1_text && cta1_link && (
           <div className="space-x-2 mt-10 ">
             <Link
               href={cta1_link}
