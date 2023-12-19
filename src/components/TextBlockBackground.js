@@ -2,7 +2,7 @@ export const TextBlockBackground = () => {
   return (
     <svg
       viewBox="0 0 390 340"
-      className="stroke-primary fill-none"
+      className="stroke-primary fill-none align-top h-full"
       xmlns="http://www.w3.org/2000/svg"
     >
       <mask id="mask0_554_311" maskUnits="userSpaceOnUse">
