@@ -75,7 +75,7 @@ const ContactFormBlock = ({
       key={key}
       id="contact"
       contentBlockId={contentBlockId}
-      className="scroll-p-0 space-y-4 flex flex-col items-center bg-primary text-primary-content pt-28 bg-[url('/contactformblock_bg.svg')]"
+      className="scroll-p-0 space-y-4 flex flex-col items-center bg-primary text-primary-content pt-28 bg-[url('/contactformblock_bg.svg')] bg-no-repeat"
     >
       <div
         className={`hero p-0  `}
