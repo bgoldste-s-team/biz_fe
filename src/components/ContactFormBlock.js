@@ -91,23 +91,52 @@ const ContactFormBlock = ({
           <p className="max-w-2xl text-lg font-sans px-2">{subheader?.slice(0, 200)}</p>
 
           <div className="space-x-2">
-            <div className="form-control w-full mt-20">
+            <div className="form-control w-full mt-20 ">
               <form
                 onSubmit={handleSubmit}
-                className="flex justify-center items-center sm:items-start flex-col sm:flex-row gap-7 sm:gap-10 mb-32 sm:mb-48"
-              >
-                <input
+                className="flex justify-center items-center sm:items-start flex-col
+                
+                  gap-7 sm:gap-10 mb-32 sm:mb-48 "
+              > 
+               <input
+                type="text"
+                placeholder="Name"
+                className="input font-sans  bg-white text-neutral  input input-bordered w-72 md:w-80"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              />
+              <input
                   type="email"
-                  className="input font-sans  bg-white text-neutral input-bordered w-80 sm:w-96"
+                  className="input font-sans  bg-white text-neutral input-bordered w-72 md:w-80"
                   value={formData.email}
                   placeholder="Email Address"
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
                 />
+
+                
+              
+           
+              <input
+                type="phone"
+                placeholder="Phone Number"
+                className="input font-sans  bg-white text-neutral  input input-bordered w-72 md:w-80"
+                value={formData.phone_number}
+                onChange={(e) => setFormData({ ...formData, phone_number: e.target.value })}
+              />
+        
+              <textarea
+                className=" font-sans  bg-white text-neutral  textarea textarea-bordered textarea-lg w-72 md:w-80"
+                placeholder="Message"
+                rows={3}
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              ></textarea>
+                
                 <button
                   type="submit"
-                  className="font-sans normal-case btn btn-sm h-10 px-10 btn-secondary mt-1"
+                  className="font-sans normal-case btn btn-sm h-10 px-10 btn-secondary mt-1 sm:w-80"
                 >
                   {cta1_text ? cta1_text : "Submit"}
                 </button>
