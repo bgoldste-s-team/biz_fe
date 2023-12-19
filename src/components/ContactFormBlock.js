@@ -88,7 +88,7 @@ const ContactFormBlock = ({
             <h1 className="text-5xl font-thin">{header} </h1>
           </div>
 
-          <p className="max-w-2xl px-2">{subheader?.slice(0, 200)}</p>
+          <p className="max-w-2xl text-lg font-sans px-2">{subheader?.slice(0, 200)}</p>
 
           <div className="space-x-2">
             <div className="form-control w-full mt-20">
