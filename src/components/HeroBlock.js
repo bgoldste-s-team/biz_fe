@@ -25,7 +25,7 @@ const HeroBlock = ({
       className={` p-0  bg-primary text-primary-content `}
       // style={{backgroundImage: `url(${image_link})`}}
     >
-      <div className="p-14 sm:pl-24 pt-10 mt-0 flex flex-col text-left text-primary-content">
+      <div className="p-14 sm:pl-24 pt-10 mt-0 flex flex-col text-center md:text-left text-primary-content">
         <div className="flex flex-col ">
           <h1 className="text-6xl sm:leading-snug">{header}</h1>
           <p className="max-w-xl text-2xl pt-5">{subheader}</p>
