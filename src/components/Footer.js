@@ -11,7 +11,7 @@ const Footer = ({ site, pages }) => {
 
 
 
-      <footer className="min-h-[40vh] footer p-10 bg-neutral text-neutral-content">
+      <footer className="min-h-[40vh] footer py-10 p-12 sm:px-24 bg-neutral text-neutral-content">
         <aside>
           <h1 className="text-2xl font-thin">{site.name}</h1>
           <h4 className="flex flex-row space-x-4 mt-5">
