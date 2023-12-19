@@ -94,7 +94,7 @@ const ContactFormBlock = ({
             <div className="form-control w-full mt-20">
               <form
                 onSubmit={handleSubmit}
-                className="flex justify-center items-center sm:items-start flex-col sm:flex-row gap-7 sm:gap-10"
+                className="flex justify-center items-center sm:items-start flex-col sm:flex-row gap-7 sm:gap-10 mb-32 sm:mb-48"
               >
                 <input
                   type="email"
@@ -107,7 +107,7 @@ const ContactFormBlock = ({
                 />
                 <button
                   type="submit"
-                  className="btn btn-md mb-32 sm:mb-48 sm:px-10 btn-secondary font-sans normal-case w-36"
+                  className="font-sans normal-case btn btn-sm h-10 px-10 btn-secondary mt-1"
                 >
                   {cta1_text ? cta1_text : "Submit"}
                 </button>
