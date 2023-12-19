@@ -38,10 +38,10 @@ const TextBlock = ({
       <div className="flex flex-col text-neutral-content p-12 lg:p-0 lg:mr-2 lg:pt-24">
         <h2 className="text-4xl font-thin">{header}</h2>
 
-        <div className="mt-5 font-thin">
+        <div className="mt-5">
           <ReactMarkdown
             plugins={[remarkGfm]}
-            className="prose text-neutral-content marker:text-neutral-content"
+            className="prose font-sans text-neutral-content marker:text-neutral-content"
           >
             {body}
           </ReactMarkdown>
