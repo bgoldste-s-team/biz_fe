@@ -66,21 +66,11 @@ module.exports = {
           "primary-content": "#fff",
           secondary: "#fff",
           "secondary-content": "#000",
-          neutral: "#fff",
-          "neutral-content": "#000",
-          "bg-neutral-content": "#fff",
-          "font-family": "Noto Serif JP",
-        },
-        film3: { //same as film?
-          "base-100": "#fff", //base of application
-          "base-content": "#000", //base of text on this
-          primary: "#fff",
-          "primary-content": "#000",
-          secondary: "#000",
-          "secondary-content": "#fff",
-          neutral: "#000",
-          "neutral-content": "#fff",
-          "bg-neutral-content": "#FFF",
+          neutral:"#fff",
+          //   "neutral-content": "#00000f",
+           "neutral-content": "#000",
+          "bg-neutral-content": "#0000",
+          "pattern-color": "#000",
           "font-family": "Noto Serif JP",
         },
          film: { //bw 

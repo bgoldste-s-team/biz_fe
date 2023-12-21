@@ -66,6 +66,18 @@ export default function Layout({ children, site, page }) {
               amzn_assoc_region = "US";
                  `}
       </Script>
+      <Script id="heylibby" type="text/javascript" strategy="lazyOnload">
+      {`
+      
+            window.id = 153292;
+            window.baseurl = 'https://heylibby.ai/';
+            const chatbotEmbedScript = document.createElement("script");
+            chatbotEmbedScript.src = window.baseurl + "js/chatbot-embed.js";
+            document.head.appendChild(chatbotEmbedScript);
+  
+        `}
+       
+      </Script>
 
       <Script
         id="az-b2"

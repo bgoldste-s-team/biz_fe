@@ -21,7 +21,7 @@ const TextBlock = ({
     <div
       key={key}
       contentBlockId={contentBlockId}
-      className={`bg-neutral lg:p-24 lg:pr-0 lg:mr-0 lg:py-12 lg:pt-0 rounded-none rounded-t-2xl card md:card-side items-end ${
+      className={`bg-neutral text-neutral-content lg:p-24 lg:pr-0 lg:mr-0 lg:py-12 lg:pt-0 rounded-none rounded-t-2xl card md:card-side items-end ${
         index % 2 === 0 ? "md:text-right" : "md:flex-row-reverse "
       }   `}
     >

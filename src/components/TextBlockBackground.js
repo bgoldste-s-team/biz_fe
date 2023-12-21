@@ -8,7 +8,7 @@ export const TextBlockBackground = () => {
       <mask id="mask0_554_311" maskUnits="userSpaceOnUse">
         <path
           d="M0 16C0 7.16344 7.16344 0 16 0H374C382.837 0 390 7.16344 390 16V340H0V16Z"
-          className="fill-primary"
+          className="fill-white"
           fill="#22352B"
         />
       </mask>
