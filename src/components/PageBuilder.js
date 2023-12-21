@@ -17,7 +17,8 @@ import ContentNetwork from "@/components/ContentNetwork";
 import TitleBlock from "@/components/TitleBlock";
 import ContactFormBlock from "@/components/ContactFormBlock";
 export default function PageBuilder({ page, site }) {
-  // console.log(site)
+  
+  console.log(site)
   // console.log(page)
 
   const adRules = {
