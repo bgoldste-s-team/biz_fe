@@ -133,6 +133,18 @@ module.exports = {
           "bg-neutral-content": "#FFF",
           "font-family": "Noto Serif JP",
         },
+         beachyReverse: {
+          "base-content": "#F9FFFD", //base of application
+          "base-100": "#222B35", //dark/base text on base color
+          "primary-content": "#F9FFFD", //base of application
+          "primary": "#222B35", //dark/base text on base color
+          "secondary-content": "#59C1C7", //CTA color / splash
+          "secondary": "#F9FFFD", //base of application
+          "neutral-content": "#222B35", //dark/base text on base color
+          "neutral": "#F9FFFD", //base of application
+          "bg-neutral-content": "#FFF",
+          "font-family": "Noto Serif JP",
+        },
         pink: {
           "base-100": "#FCEEEE", //base of application
           "base-content": "#332235", //dark/base text on base color

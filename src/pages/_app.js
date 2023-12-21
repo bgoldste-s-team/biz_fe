@@ -38,7 +38,7 @@ export default function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <ThemeProvider attribute="class">
-      <div data-theme={"beachy"}>
+      <div data-theme={"beachyReverse"}>
         <Component {...pageProps} />
       </div>
     </ThemeProvider>
