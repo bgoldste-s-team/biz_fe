@@ -1,4 +1,5 @@
 import React from "react";
+import BlockQuoteBlock from "@/components/BlockQuoteBlock";
 import HeroBlock from "@/components/HeroBlock";
 import TextBlock from "@/components/TextBlock";
 import ProductCardBlock from "@/components/ProductCardBlock";
@@ -199,6 +200,9 @@ export default function PageBuilder({ page, site }) {
 
           case "SubscribeBlock":
             return commonDiv(ContactFormBlock, null, {}, { site_id: site.id });
+          
+          case "BlockQuoteBlock":
+            return commonDiv(BlockQuoteBlock, null, {}, { site_id: site.id });
 
           default:
             return <h1>Type Not supported {c.type}</h1>;
