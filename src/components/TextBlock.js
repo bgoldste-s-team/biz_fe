@@ -21,9 +21,7 @@ const TextBlock = ({
     <div
       key={key}
       contentBlockId={contentBlockId}
-      className={`bg-neutral lg:p-24 lg:pr-0 lg:mr-0 lg:py-12 lg:pt-0 rounded-none rounded-t-2xl card md:card-side items-end ${
-        index % 2 === 0 ? "md:text-right" : "md:flex-row-reverse "
-      }   `}
+      className={`bg-neutral lg:p-24 lg:pr-0 lg:mr-0 lg:py-12 lg:pt-0 rounded-none rounded-t-2xl card md:card-side items-end md:flex-row-reverse`}
     >
       {image_link ? (
         <img
@@ -35,7 +33,7 @@ const TextBlock = ({
         <TextBlockBackground />
       )}
 
-      <div className="flex flex-col text-neutral-content p-12 lg:p-0 lg:mr-2 lg:pt-24">
+      <div className="flex flex-col text-neutral-content p-12 lg:p-0 lg:mr-2 lg:pt-24 w-full lg:w-5/12">
         <h2 className="text-4xl font-thin">{header}</h2>
 
         <div className="mt-5">
