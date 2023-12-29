@@ -1,5 +1,6 @@
 import React from "react";
-import Link from "next/link";
+import { RiDoubleQuotesL } from "react-icons/ri";
+import { IoRemoveOutline } from "react-icons/io5";
 
 const BlockQuoteBlock = ({
   header,
@@ -12,12 +13,24 @@ const BlockQuoteBlock = ({
   children,
 }) => {
   return (
-    <div className="bg-neutral p-12 lg:p-24 h-screen flex flex-col items-center justify-center">
-      <div className="w-full lg:w-7/12 text-thin text-4xl text-neutral-content">
-        {header}
-      </div>
-      <div className="mt-10 w-full lg:w-7/12 text-right text-thin text-3xl text-neutral-content">
-        {subheader}
+    <div className="bg-neutral p-12 lg:p-24 h-screen flex flex-row items-center justify-center">
+      <div className="flex flex-row items-start w-full lg:w-8/12">
+        <RiDoubleQuotesL
+          className="relative text-neutral-content"
+          size={"75px"}
+        />
+        <div className="ml-5 mt-10 bg-neutral">
+          <div className="text-thin text-4xl text-neutral-content">
+            {header}
+          </div>
+          <div className="text-right mt-10 text-thin text-3xl text-neutral-content flex flex-row justify-end">
+            <IoRemoveOutline
+              className="w-16 relative right-0 bottom-2"
+              size={"55px"}
+            />
+            <span className="text-right w-32 lg:w-auto">{subheader}</span>
+          </div>
+        </div>
       </div>
     </div>
   );
