@@ -70,7 +70,7 @@ const GalleryBlock = ({
           </div>
         </div>
         {i == children.length - 1 ? null : (
-          <hr class="h-px my-8 bg-primary border-0" />
+          <hr className="h-px my-8 bg-primary border-0" />
         )}
       </div>
     );
