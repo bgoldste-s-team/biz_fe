@@ -10,6 +10,7 @@ import SubscribeBlock from "@/components/SubscribeBlock";
 import FeaturedPages from "@/components/FeaturedPages";
 import FeaturesBlock from "@/components/FeaturesBlock";
 import AdBlock from "@/components/AdBlock";
+import GalleryBlock from "@/components/GalleryBlock";
 import Link from "next/link";
 import EngagementBlock from "@/components/EngagementBlock";
 import AmazonProductCard from "@/components/AmazonProductCard";
@@ -192,17 +193,29 @@ export default function PageBuilder({ page, site }) {
               </div>
             );
           case "FeaturesBlock":
-            console.log(c, c.children)
-            return commonDiv(FeaturesBlock, null,{}, { cb_children: c.children });
+            return commonDiv(
+              FeaturesBlock,
+              null,
+              {},
+              { cb_children: c.children }
+            );
 
           case "ContactFormBlock":
             return commonDiv(ContactFormBlock, null, {}, { site_id: site.id });
 
           case "SubscribeBlock":
             return commonDiv(ContactFormBlock, null, {}, { site_id: site.id });
-          
+
           case "BlockQuoteBlock":
             return commonDiv(BlockQuoteBlock, null, {}, { site_id: site.id });
+
+          case "GalleryBlock":
+            return commonDiv(
+              GalleryBlock,
+              null,
+              {},
+              { site_id: site.id, children: c.children }
+            );
 
           default:
             return <h1>Type Not supported {c.type}</h1>;
