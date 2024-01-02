@@ -43,26 +43,37 @@ const GalleryBlock = ({
 
   const imageBlocks = children.map((child, i) => {
     let image;
-    switch (i % 4) {
-      case 0:
-        image = <GalleryBlockDefaultImage1 />;
-        break;
-      case 1:
-        image = <GalleryBlockDefaultImage2 />;
-        break;
-      case 2:
-        image = <GalleryBlockDefaultImage3 />;
-        break;
-      case 3:
-        image = <GalleryBlockDefaultImage4 />;
-        break;
+    // child.image_link = "https://www.stockvault.net/data/2016/03/22/189635/preview16.jpg"
+    if (child.image_link) {
+      image = (
+        <img src={child.image_link} alt="Hero Image" className="w-full" />
+      );
+    } else {
+      switch (i % 4) {
+        case 0:
+          image = <GalleryBlockDefaultImage1 />;
+          break;
+        case 1:
+          image = <GalleryBlockDefaultImage2 />;
+          break;
+        case 2:
+          image = <GalleryBlockDefaultImage3 />;
+          break;
+        case 3:
+          image = <GalleryBlockDefaultImage4 />;
+          break;
+      }
     }
 
     return (
       <div key={`gallery-item-${i}`}>
-        <div className="flex lg:flex-row flex-col my-10 lg:my-20 items-center lg:items-start">
-          <div className="grow w-9/12">{image}</div>
-          <div className="grow text-left px-0 lg:px-20 py-10">
+        <div className="flex lg:flex-row flex-col lg:mb-14 items-center lg:items-start">
+          <div
+            className={`grow lg:w-9/12 ${child.image_link ? "lg:mt-16" : ""}`}
+          >
+            {image}
+          </div>
+          <div className="grow text-left px-0 lg:px-20 lg:py-10">
             <div className="mt-5 text-2xl">{defaultText[i].header}</div>
             <div className="mt-5 font-sans prose text-neutral-content">
               {defaultText[i].subheader}
@@ -70,16 +81,16 @@ const GalleryBlock = ({
           </div>
         </div>
         {i == children.length - 1 ? null : (
-          <hr className="h-px my-8 bg-primary border-0" />
+          <hr className="h-px my-8 lg:my-0 bg-primary border-0" />
         )}
       </div>
     );
   });
 
   return (
-    <div className="bg-neutral text-neutral-content px-12 py-24 lg:p-24 h-full w-full flex flex-col justify-start items-center">
+    <div className="bg-neutral text-neutral-content px-12 pt-24 lg:px-24 h-full w-full flex flex-col justify-start items-center">
       <div className="text-thin text-5xl">{header}</div>
-      <div className="flex flex-col w-full">{imageBlocks}</div>
+      <div className="flex flex-col w-full mt-20 lg:mt-5">{imageBlocks}</div>
     </div>
   );
 };
