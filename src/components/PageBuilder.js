@@ -193,6 +193,7 @@ export default function PageBuilder({ page, site }) {
               </div>
             );
           case "FeaturesBlock":
+            console.log('feautres', c)
             return commonDiv(
               FeaturesBlock,
               null,

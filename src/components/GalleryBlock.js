@@ -44,9 +44,9 @@ const GalleryBlock = ({
   const imageBlocks = children.map((child, i) => {
     let image;
     // child.image_link = "https://www.stockvault.net/data/2016/03/22/189635/preview16.jpg"
-    if (child.image_link) {
+    if (child.image_url) {
       image = (
-        <img src={child.image_link} alt="Hero Image" className="w-full" />
+        <img src={child.image_url} alt="Hero Image" className="w-full" />
       );
     } else {
       switch (i % 4) {
