@@ -74,9 +74,9 @@ const GalleryBlock = ({
             {image}
           </div>
           <div className="grow text-left px-0 lg:px-20 lg:py-10">
-            <div className="mt-5 text-2xl">{defaultText[i].header}</div>
+            <div className="mt-5 text-2xl">{child.subheader}</div>
             <div className="mt-5 font-sans prose text-neutral-content">
-              {defaultText[i].subheader}
+              {child.body}
             </div>
           </div>
         </div>
