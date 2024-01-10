@@ -67,9 +67,9 @@ const GalleryBlock = ({
 
     return (
       <div key={`gallery-item-${i}`}>
-        <div className="flex lg:flex-row flex-col lg:mb-14 items-center lg:items-start">
+        <div className="flex lg:flex-row flex-col items-center lg:items-start lg:py-24">
           <div
-            className={`grow lg:w-9/12 ${child.image_link ? "lg:mt-16" : ""}`}
+            className={`grow lg:w-9/12 lg:px-10`}
           >
             {image}
           </div>
