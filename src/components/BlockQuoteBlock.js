@@ -20,15 +20,15 @@ const BlockQuoteBlock = ({
           size={"75px"}
         />
         <div className="ml-5 mt-10 bg-neutral">
-          <div className="text-thin text-4xl text-neutral-content">
+          <div className="text-thin text-3xl text-neutral-content">
             {header}
           </div>
-          <div className="text-right mt-10 text-thin text-3xl text-neutral-content flex flex-row justify-end">
+          <div className="text-right mt-10 text-thin text-neutral-content flex flex-row justify-end">
             <IoRemoveOutline
               className="w-16 relative right-0 bottom-2"
               size={"55px"}
             />
-            <span className="text-right w-32 lg:w-auto">{subheader}</span>
+            <span className="text-right text-xl sm:text-2xl w-32 lg:w-auto">{subheader}</span>
           </div>
         </div>
       </div>
