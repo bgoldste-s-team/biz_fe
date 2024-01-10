@@ -30,6 +30,7 @@ const ContactFormBlock = ({
     message: "",
   });
   const [feedback, setFeedback] = useState("");
+  const [feedbackSuccess, setFeedbackSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,6 +38,7 @@ const ContactFormBlock = ({
     // Validate
     if (!formData.email) {
       setFeedback("Email is required!");
+      setFeedbackSuccess(false);
       return;
     }
 
@@ -52,6 +54,7 @@ const ContactFormBlock = ({
 
       if (response.ok) {
         setFeedback("Thanks for contacting us. We will be in touch soon!");
+        setFeedbackSuccess(true);
         setFormData({
           name: "",
           email: "",
@@ -60,9 +63,11 @@ const ContactFormBlock = ({
         });
       } else {
         setFeedback("Error submitting form.");
+        setFeedbackSuccess(false);
       }
     } catch (error) {
       setFeedback("Error submitting form.");
+      setFeedbackSuccess(false);
     }
   };
 
@@ -75,7 +80,7 @@ const ContactFormBlock = ({
       key={key}
       id="contact"
       contentBlockId={contentBlockId}
-      className="scroll-p-0 space-y-4 flex flex-col items-center bg-primary text-primary-content pt-28 bg-[url('/contactformblock_bg.svg')] bg-no-repeat"
+      className="scroll-p-0 space-y-4 flex flex-col items-center bg-primary text-primary-content pt-28 bg-[url('/contactformblock_bg.svg')] bg-no-repeat pb-24"
     >
       <div
         className={`hero p-0  `}
@@ -83,31 +88,35 @@ const ContactFormBlock = ({
       >
         {/* <div className="hero-overlay bg-opacity-0"></div> */}
 
-        <div className="hero-content p-0 mt-0 flex flex-col text-center ">
+        <div className="hero-content p-0 mt-0 flex flex-col text-center w-full">
           <div className="flex flex-col space-y-2 max-w-xl ">
             <h1 className="text-5xl font-thin">{header} </h1>
           </div>
 
-          <p className="max-w-2xl text-lg font-sans px-2">{subheader?.slice(0, 200)}</p>
+          <p className="max-w-2xl text-lg font-sans px-2">
+            {subheader?.slice(0, 200)}
+          </p>
 
-          <div className="space-x-2">
-            <div className="form-control w-full mt-20 ">
+          <div className="space-x-2 w-2/3">
+            <div className="form-control w-full mt-2">
               <form
                 onSubmit={handleSubmit}
                 className="flex justify-center items-center sm:items-start flex-col
                 
-                  gap-7 sm:gap-10 mb-32 sm:mb-48 "
-              > 
-               <input
-                type="text"
-                placeholder="Name"
-                className="input font-sans  bg-white text-neutral  input input-bordered w-72 md:w-80"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              />
-              <input
+                  gap-4"
+              >
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="input font-sans  bg-white text-neutral  input input-bordered w-full"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                />
+                <input
                   type="email"
-                  className="input font-sans  bg-white text-neutral input-bordered w-72 md:w-80"
+                  className="input font-sans  bg-white text-neutral input-bordered w-full"
                   value={formData.email}
                   placeholder="Email Address"
                   onChange={(e) =>
@@ -115,34 +124,35 @@ const ContactFormBlock = ({
                   }
                 />
 
-                
-              
-           
-              <input
-                type="phone"
-                placeholder="Phone Number"
-                className="input font-sans  bg-white text-neutral  input input-bordered w-72 md:w-80"
-                value={formData.phone_number}
-                onChange={(e) => setFormData({ ...formData, phone_number: e.target.value })}
-              />
-        
-              <textarea
-                className=" font-sans  bg-white text-neutral  textarea textarea-bordered textarea-lg w-72 md:w-80"
-                placeholder="Message"
-                rows={3}
-                value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              ></textarea>
-                
+                <input
+                  type="phone"
+                  placeholder="Phone Number"
+                  className="input font-sans  bg-white text-neutral  input input-bordered w-full"
+                  value={formData.phone_number}
+                  onChange={(e) =>
+                    setFormData({ ...formData, phone_number: e.target.value })
+                  }
+                />
+
+                <textarea
+                  className=" font-sans  bg-white text-neutral  textarea textarea-bordered textarea-lg w-full"
+                  placeholder="Message"
+                  rows={3}
+                  value={formData.message}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
+                ></textarea>
+
                 <button
                   type="submit"
-                  className="font-sans normal-case btn btn-sm h-10 px-10 btn-secondary mt-1 sm:w-80"
+                  className="font-sans normal-case btn btn-sm h-10 px-10 btn-secondary mt-1 w-full"
                 >
                   {cta1_text ? cta1_text : "Submit"}
                 </button>
               </form>
               {feedback && (
-                <div className="alert bg-neutral-content text-neutral  my-4">
+                <div className={`alert font-bold text-neutral ${feedbackSuccess ? 'text-green-700' : 'text-red-600'} my-4 w-full`}>
                   {feedback}
                 </div>
               )}
