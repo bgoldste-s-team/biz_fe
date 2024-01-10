@@ -28,17 +28,17 @@ const FeaturesBlock = ({
         <h2 className="text-left justify-start basis-0 text-4xl text-neutral-content font-thin">
           {header} 
         </h2>
-        <div className="text-primary-content text-center space-y-16 lg:space-y-0 lg:space-x-32 flex flex-col lg:flex-row pt-16 lg:p-12 lg:mr-2 lg:pt-12">
+        <div className="text-primary-content text-center space-y-16 lg:space-y-0 lg:space-x-14 flex flex-col lg:flex-row pt-16 lg:p-12 lg:mr-2 lg:pt-12">
         {cb_children?.map((child, index) => 
 
-            <div key={index} className="w-full p-8 bg-primary rounded-2xl flex flex-col justify-between">
+            <div key={index} className="w-full p-8 bg-primary rounded-2xl flex flex-col content-center">
               <p className="text-2xl">{child.header}</p>
               {/* <p className="mb-auto pt-8 text-lg prose"> */}
               {/* {child.body} */}
               {/* </p> */}
               <ReactMarkdown
                 plugins={[remarkGfm]}
-                className="mb-auto prose font-sans pt-8 text-lg prose text-neutral"
+                className="mb-auto font-sans pt-8 prose text-neutral"
               >
                 {child.body}
               </ReactMarkdown>
