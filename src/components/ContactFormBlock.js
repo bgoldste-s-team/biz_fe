@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Link from "next/link";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+import { renderToStaticMarkup } from "react-dom/server";
+import { ContactFormBackground } from "./ContactFormBackground";
 
 const ContactFormBlock = ({
   key,
@@ -75,12 +74,19 @@ const ContactFormBlock = ({
     return <h1> NO SITE ID</h1>;
     // return null;
   }
+
+  const svgString = encodeURIComponent(
+    renderToStaticMarkup(<ContactFormBackground stroke={"currentColor"} />)
+  );
+  const dataUri = `url("data:image/svg+xml,${svgString}") no-repeat`;
+
   return (
     <div
       key={key}
       id="contact"
       contentBlockId={contentBlockId}
-      className="scroll-p-0 space-y-4 flex flex-col items-center bg-primary text-primary-content pt-28 bg-[url('/contactformblock_bg.svg')] bg-no-repeat pb-24"
+      style={{ background: dataUri, backgroundRepeat: "no-repeat!important;" }}
+      className={`scroll-p-0 space-y-4 flex flex-col items-center bg-primary text-primary-content bg-no-repeat pt-20 pb-20`}
     >
       <div
         className={`hero p-0  `}
@@ -152,7 +158,11 @@ const ContactFormBlock = ({
                 </button>
               </form>
               {feedback && (
-                <div className={`alert font-bold text-neutral ${feedbackSuccess ? 'text-green-700' : 'text-red-600'} my-4 w-full`}>
+                <div
+                  className={`alert font-bold text-neutral ${
+                    feedbackSuccess ? "text-green-700" : "text-red-600"
+                  } my-4 w-full`}
+                >
                   {feedback}
                 </div>
               )}
